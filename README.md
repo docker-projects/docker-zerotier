@@ -13,6 +13,9 @@ To run this container in the correct way requires some special options to give i
       -v /var/lib/zerotier-one:/var/lib/zerotier-one ugeek/zerotier
 
 
+    docker run --name zerotier-one --device=/dev/net/tun --net=host \
+      --cap-add=NET_ADMIN --cap-add=SYS_ADMIN \
+      -v $HOME/docker/zerotier-one:/var/lib/zerotier-one ugeek/zerotier
 
 
 
